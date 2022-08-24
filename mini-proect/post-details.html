@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+
+    let url = new URL(location.href)
+    let id = url.searchParams.get('id')
+
+    fetch(`https://jsonplaceholder.typicode.com/users/${id}/posts`)
+    .then(promise => promise.json())
+    .then(data=>{
+        let div = document.createElement('div')
+        document.body.appendChild(div)
+
+        function recursion(item) {
+            for (const itemElement in item) {
+                if (typeof item[itemElement] !== 'object'){
+                    let p = document.createElement('p')
+                    p.append(`${itemElement} - ${item[itemElement]}`)
+                    div.appendChild(p)
+                }else{
+                    recursion(item[itemElement])
+                }
+            }
+        }
+        recursion(data)
+    })
+
+
+
+</script>
+
+</body>
+</html>
