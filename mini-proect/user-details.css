@@ -1,0 +1,25 @@
+.details{
+    background: silver;
+}
+.btnDetails:hover{
+    background: greenyellow;
+}
+.btnPosts:hover{
+    background: greenyellow;
+}
+.divComent{
+    background: silver;
+}
+.btnDiv{
+    display: flex;
+    flex-direction: column;
+}
+.allDiv{
+    background: silver;
+    display: flex;
+    border: 1px solid black;
+    margin-top: 10px;
+}
+.divClass{
+    border: 1px solid black;
+}
