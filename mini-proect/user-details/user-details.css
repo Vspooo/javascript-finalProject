@@ -15,11 +15,16 @@
     flex-direction: column;
 }
 .allDiv{
+    flex-wrap: wrap;
     background: silver;
     display: flex;
     border: 1px solid black;
     margin-top: 10px;
+    margin-left: 230px;
+    width: 1110px ;
 }
 .divClass{
     border: 1px solid black;
+    width: 220px;
+    height: 80px;
 }

@@ -1,6 +1,10 @@
+
 fetch('https://jsonplaceholder.typicode.com/users')
     .then((response) => response.json())
     .then(users =>{
+        let mainDiv = document.createElement('div')
+        mainDiv.classList.add('mainDiv')
+        document.body.appendChild(mainDiv)
         for (const user of users) {
             let div = document.createElement('div')
             div.innerText = `${user.id} - ${user.name}`
@@ -12,6 +16,6 @@ fetch('https://jsonplaceholder.typicode.com/users')
                 location.href = `../user-details/user-details.html?id=${user.id}`
             }
             div.appendChild(btn)
-            document.body.appendChild(div)
+            mainDiv.appendChild(div)
         }
     })
