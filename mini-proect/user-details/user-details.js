@@ -46,7 +46,7 @@ fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
                         btnPosts.classList.add('btnPosts')
                         btnPosts.innerText = 'click'
                         btnPosts.onclick = function (){
-                            location.href = `post-details.html?id=${coment.id}`
+                            location.href = `../post-details/post-details.html?id=${coment.id}`
                         }
                         div.append(btnPosts)
                         allDiv.appendChild(div)

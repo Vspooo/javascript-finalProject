@@ -9,7 +9,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
             btn.classList.add('btn')
             btn.innerText = 'More info'
             btn.onclick = function (){
-                location.href = `user-details.html?id=${user.id}`
+                location.href = `../user-details/user-details.html?id=${user.id}`
             }
             div.appendChild(btn)
             document.body.appendChild(div)
